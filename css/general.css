@@ -133,6 +133,7 @@ body {
   /* letter-spacing: 0.75px; */
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -144,6 +145,11 @@ body {
   padding: 1.6rem 3.2rem;
   border-radius: 1.2rem;
   font-weight: 600;
+
+  /* Only necessary for .btn class */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 
   /* this is the state before we hover, we make the animation smooth here */
   /* put the transition prop on the original state */
@@ -174,6 +180,18 @@ body {
   /* trick to add border inside: inset means shadow gets added to the inside of the element,
      basically adds a border without increasing the total size of the elem*/
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .link:link,
@@ -215,6 +233,14 @@ body {
   color: #e67e22;
 }
 
+*:focus {
+  /* for when you hit tab and it goes over an elem */
+  outline: none;
+  /* outline: 4px dotted #e67e22; */
+  /* outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
 /* UTILITY CLASSES */
 .margin-right-sm {
   margin-right: 1.6rem !important;
@@ -230,4 +256,10 @@ body {
 
 strong {
   font-weight: 500;
+}
+
+.cta *:focus {
+  /* for people who tab around */
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
