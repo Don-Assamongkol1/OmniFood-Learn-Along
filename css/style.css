@@ -489,11 +489,11 @@
 }
 
 /**************************************/
-/* CTA SECTION */
+/* CTA (Call to action) SECTION */
 /**************************************/
 
 .section-cta {
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 12.8rem 0;
 }
 
 .cta {
@@ -567,4 +567,92 @@
 .cta-form input::placeholder {
   color: #aaa;
   /* pseudo element to make it lighter */
+}
+
+/**************************************/
+/* Footer SECTION */
+/**************************************/
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: repeat(2, 3fr) repeat(3, 2fr);
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: block;
+  /* links are just inline elems, thus if you want to add vertical spacing, have to change display to block */
+  margin-bottom: 3.2rem;
+}
+
+/* instead of styling on social-icon */
+/* .social-links ion-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+} */
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto; /* this is how we align the copyright text to btm of page 
+  within the grid. See Building the footer part 2 min 13 */
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767677;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #000;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
 }
